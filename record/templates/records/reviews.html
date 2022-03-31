@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block style %}
+    .rev{
+        color: white;
+        margin-top: 150px;
+        margin-left: 150px;
+    }
+    h1{
+        color: white;
+        text-align: center;
+    }
+    body{
+        background-image: url("../../static/styles/images/bardiglio-close.JPG");
+    }
+    .revtitle{
+        font-family: 'cursive';
+        font-weight: bold;
+    }
+{% endblock %}
+{% block title %} Отзывы {% endblock %}
+{% block content %}
+    <div class="clean"></div>
+    <h1 class="revtitle">Отзывы</h1>
+    <div class="rev">
+        {% for review in reviews %}
+            <h3>{{ review.name }}</h3>
+{#            <p><img src="{{ review.photo }}" alt="alter text"></p>#}
+            <p>{{ review.body }}</p>
+            <p>{{ review.record_type }}<br>
+                {{ review.publish }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

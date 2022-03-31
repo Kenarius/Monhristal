@@ -6,4 +6,5 @@ from . import views
 app_name = 'record'
 urlpatterns = [
     path('', views.main_view),
+    path('reviews/', views.review_view, name='review'),
 ]

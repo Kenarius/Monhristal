@@ -1,29 +1,43 @@
+
+{% load static %}
+
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/mainStyle.css">
+    <link rel="stylesheet" href="../../static/mainStyle.css">
+    <style>
+        body{
+            background-image: url("../../static/styles/images/shattered-island.gif");
 
+        }
+        div.record div.about{
+            margin-left: 35px;
+            color: white;
+            font-size: 27px;
+        }
+    </style>
     <title>Monhristal</title>
 </head>
 <body>
   
   <div class="jumbotron text-center red menu" >
-    <span class="logo"><img src="styles/images/logo.jpg" width="80" height="80" alt=""></span>
-    <span class="main">Главная</span>
+    <span class="logo"><img src="../../static/styles/images/logo.jpg" width="80" height="80" alt=""></span>
+    <span class="main"><a href="">Главная</a></span>
     <span class="services">Услуги</span>
     <span class="contacts"><a href="#footer">Контакты</a></span>
-    <span class="reviews">Отзывы</span>
+    <span class="reviews"><a href="reviews/">Отзывы</a></span>
     <span class="records">Мои записи</span>
     <span class="login">Авторизация</span>
   </div>
-  <span class="hello">Заголовок бла-бла-бла</span><br><br><br><br><br> <span class="hello text"> И ещё можно что-то накалять бла-бла</span>
+  <span class="hello"></span><br><br><br><br><br> <span class="hello text"> </span>
   <div class="greeting">
     <div class="video">
       <video class="video" loop="loop" autoplay="" muted="" poster="">
-        <source src="styles/videos/seagull_-_103797 (Original).mp4" type="video/mp4" />
+        <source src="../../static/styles/videos/IMG_9667.MOV" type="video/mp4" />
+      </video>>
     </div>
   </div>
   <div class="container-fluid">
@@ -33,14 +47,14 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Фотосессия</a></div>
-            <img src="styles/images/photo1.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo1.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Фотосессия</a></div>            
-            <img src="styles/images/photo2.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo2.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="styles/images/photo3.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo3.jpg" width="350" height="525" class="d-block w-100" alt="...">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Фотосессия</a></div>
           </div>
         </div>
@@ -60,16 +74,16 @@
           <div class="carousel-item active">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Предметая<br>съёмка</a></div>
 
-            <img src="styles/images/photo4.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo4.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Предметая<br>съёмка</a></div>
 
-            <img src="styles/images/photo5.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo5.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Предметая<br>съёмка</a></div>
-            <img src="styles/images/photo6.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo6.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
@@ -87,15 +101,15 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Макияж</a></div>
-            <img src="styles/images/photo7.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo7.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Макияж</a></div>
-            <img src="styles/images/photo8.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo8.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <div class="links"><a href="https://www.instagram.com/monhristal/">Макияж</a></div>
-            <img src="styles/images/photo9.jpg" width="350" height="525" class="d-block w-100" alt="...">
+            <img src="../../static/styles/images/photo9.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
@@ -110,13 +124,19 @@
     </div>
   </div>
 </div>
-<div class="record"><a class="butt">Запись</a></div>
+<div class="record">
+    <div class="about">Стаж макияжа 3 года. Обучение макияжа для себя<br>
+    Работа на коммерчиских съёмках, гриммёр на телевидении, участие в различных фотосессиях<br>Занимаеся организацией и проведением фотосъёмок более 2 лет.
+     Работаем под ключ с известными брендами алкогольной продукции,<br>был организаван проект с Domino's Pizza <br>
+    Работаем по договору подряда.  </div>
+    <a class="butt" href="https://t.me/monhristal">Запись</a></div>
 <footer class="footer" id="footer">
-    <span class="social"><a href="https://www.instagram.com/monhristal/" target="_blank"><img src="styles/images/instagram.png" alt=""></a>
-    <a href="https://t.me/monhristal" target="_blank"><img src="styles/images/telegram.png " alt=""></a>
+    <span class="logo footerlogo"><img src="../../static/styles/images/logo.jpg" width="70" height="70" alt=""></span>
+    <span class="social"><a href="https://www.instagram.com/monhristal/" target="_blank"><img src="../../static/styles/images/instagram.png" alt=""></a>
+    <a href="https://t.me/monhristal" target="_blank"><img src="../../static/styles/images/telegram.png " alt=""></a>
     </span>
-    <span class="phone">Кристина +375298612953</span>
-    <span class="adress">Адрес:<br>Улица Притыцкого 78, п. 19, кв. 690, эт. 9 <br>Есть возможность выезда на ваш адрес.</span>
+    <span class="phone">Время работы 10:00-20:00 <br> Кристина +375298612953 </span>
+    <span class="adress">Адрес:<br>Улица Притыцкого 78<br>Есть возможность выезда на ваш адрес.</span>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

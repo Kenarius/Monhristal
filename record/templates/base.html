@@ -1,0 +1,56 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/mainStyle.css">
+    <style>
+        {% block style %}
+        {% endblock %}
+        body{
+            height: 900px;
+        }
+        footer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>{% block title %}
+        DEFAULT TITLE
+    {% endblock %}</title>
+</head>
+<body>
+<div class="jumbotron text-center red menu">
+    <span class="logo"><img src="../../static/styles/images/logo.jpg" width="80" height="80" alt=""></span>
+    <span class="main"><a href="http://127.0.0.1:8000/">Главная</a></span>
+    <span class="services">Услуги</span>
+    <span class="contacts"><a href="#footer">Контакты</a></span>
+    <span class="reviews"><a href="http://127.0.0.1:8000/reviews/">Отзывы</a></span>
+    <span class="records">Мои записи</span>
+    <span class="login">Авторизация</span>
+</div>
+{% block content %}Smth{% endblock %}
+<footer class="footer" id="footer">
+    <span class="logo footerlogo"><img src="../../static/styles/images/logo.jpg" width="70" height="70" alt=""></span>
+        <span class="social"><a href="https://www.instagram.com/monhristal/" target="_blank"><img
+                src="../../static/styles/images/instagram.png" alt=""></a>
+        <a href="https://t.me/monhristal" target="_blank"><img src="../../static/styles/images/telegram.png "
+                                                               alt=""></a>
+        </span>
+    <span class="phone">Время работы 10:00-20:00 <br> Кристина +375298612953 </span>
+    <span class="adress">Адрес:<br>Улица Притыцкого 78<br>Есть возможность выезда на ваш адрес.</span>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+
+    </script>
+
+</body>
+</html>

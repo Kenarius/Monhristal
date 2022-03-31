@@ -1,0 +1,281 @@
+.jumbotron.red{
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display:block;  
+    float: top;
+    padding: 0;
+    text-align: left!important;
+    
+}
+
+ .menu{
+    font-size: 30px;
+    font-family: 'serif';
+    text-align: center;
+    
+}
+
+a{
+    color: white;
+    text-decoration: solid;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.menu span {
+    position: absolute;
+    color: white;
+    margin-top: 27px;
+    position: left;
+    margin-left: 100px;
+}
+
+.menu span.login{
+    margin-left: 1500px;
+    font-weight: bold;
+}
+
+.menu span.logo{
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+}
+
+.menu span.main{
+    margin-left: 380px;
+}
+
+.menu span.services{
+    margin-left: 510px;
+}
+
+.menu span.contacts{
+    margin-left: 620px;
+}
+
+.menu span.reviews{
+    margin-left: 770px;
+}
+
+.menu span.records{
+    margin-left: 900px;
+}
+
+body{
+    height: auto;
+}
+
+.clean{
+    height: 100px;
+    z-index: -2;
+}
+
+.greeting{
+  height: 600px;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(20%);
+}
+
+.greeting-video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+.greeting-video:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+.greeting-video .video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+.hello{
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 10;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    margin-bottom: 35%;
+    margin-top: 250px;
+    margin-left: 30%;
+  }
+
+.hello.text{
+    margin-left: 19%;
+    margin-top: 450px;
+}
+
+.test{
+    font-size: 30px;   
+    margin-top: 230px;
+}
+
+.test2{
+    margin-left: 100px;
+    height: 600px;
+}
+
+.carousel.slide{
+    width: 350px;
+    height: 400px; 
+}
+
+.links{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition-duration: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    opacity: 0;
+    background-color: RGBA(0, 0, 0, 0.5);
+    font-size: 50px;
+    text-align: center;
+}
+
+.links a{
+    font-weight: bold;
+}
+
+.carousel.slide:hover .links{
+    opacity: 1;
+}
+
+.record{
+    height: 400px;
+}
+
+.record a.butt{
+    position: absolute;
+    font-size: 45px;
+    color: white;
+    margin-left: 80%;
+    margin-bottom: 100px;
+    background-color: rgb(5, 85, 5);
+    border-radius: 10em;
+    height: 70px;
+    width: 250px;
+    text-align: center;
+    border: 1px ridge white;
+}
+
+.record a.butt:hover {
+    border: 1px ridge black;
+}
+
+div.about{
+    margin-left: 35px;
+    color: white;
+    font-size: 27px;
+}
+
+footer{
+    height: 100px;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+
+.foot{
+    height: 50px;
+    margin: 0;
+}
+
+footer span.logo.footerlogo{
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 15px;
+}
+
+footer span.social{
+    position: absolute;
+    font-size: 15px;
+    height: 50px;
+    margin-left: 15%;
+    padding-top: 15px;
+}
+    
+footer span.phone{
+    position: absolute;
+    font-size: 17px;
+    color: white;
+    height: 50px;
+    margin-left: 20%;
+    padding-top: 18px;
+}
+
+footer span.adress{
+    position: absolute;
+    font-size: 13px;
+    color: white;
+    height: 70px;
+    margin-left: 70%;
+    padding-top: 18px;
+}
+
+@media all and (max-width: 1250px){
+    .menu span{
+        padding-left: 10px; 
+        font-size: 25px;
+    }
+    .menu span.login{
+        padding-left: 150px;
+    }
+}
+
+@media all and (max-width: 800px){
+    .menu span{
+        padding-left: 10px; 
+        font-size: 25px;
+    }
+    .menu span.login{
+        padding-left: 10px;
+    }
+
+    .jumbotron.red{
+        height: 150px;
+    }
+    
+    .clean{
+        height: 150px;
+    }
+}
+
