@@ -40,11 +40,6 @@ a:hover {
     margin-left: 100px;
 }
 
-.menu span.login{
-    margin-left: 1500px;
-    font-weight: bold;
-}
-
 .menu span.logo{
     height: 80px;
     width: 80px;
@@ -68,7 +63,20 @@ a:hover {
 }
 
 .menu span.records{
-    margin-left: 900px;
+    margin-left: 1590px;
+}
+
+.menu span.login{
+    margin-left: 1200px;
+    font-weight: bold;
+}
+
+.menu span.login a{
+    margin-left: 30px;
+}
+
+.menu span.login.off {
+    margin-left: 1250px;
 }
 
 body{

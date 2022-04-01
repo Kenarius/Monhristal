@@ -12,22 +12,6 @@
         {% block style %}
         {% endblock %}
 
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
-        footer {
-            position: relative;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            margin-top: -10px;
-        }
-
-        .footer {
-            margin-top: -50px;
-        }
     </style>
     <title>{% block title %}
         DEFAULT TITLE
@@ -40,8 +24,12 @@
     <span class="services">Услуги</span>
     <span class="contacts"><a href="#footer">Контакты</a></span>
     <span class="reviews"><a href="http://127.0.0.1:8000/reviews/">Отзывы</a></span>
+    {% if request.user.is_authenticated %}
+    <span class="login">Здравствуйте {{ request.user.username }} <a href="{% url "record:logout" %}">Выход |</a> </span>
     <span class="records">Мои записи</span>
-    <span class="login">Авторизация</span>
+    {% else %}
+    <span class="login off"><a href="{% url "record:login" %}">Авторизация</a></span>
+    {% endif %}
 </div>
 {% block content %}Smth{% endblock %}
 <footer class="footer" id="footer">
