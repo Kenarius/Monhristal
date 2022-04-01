@@ -25,6 +25,17 @@
     font-weight: bold;
     }
 
+    .message{
+        margin-left: 150px;
+    }
+
+    .btn{
+    margin-left: 100px;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 30px;
+    }
+
 {% endblock %}
 {% block title %} Отзывы {% endblock %}
 {% block content %}
@@ -39,10 +50,10 @@
                 {{ review.publish }}</p>
         {% endfor %}
     </div>
-    <div>
+    <div class="message">
         {% if request.user.is_authenticated %}
             <h2>Вы можете оставить Ваш отзыв!</h2>
-            <a href="{% url "record:write_form" %}">Отзыв</a>
+            <button type="button" class="btn btn-dark"><a href="{% url "record:write_form" %}">Оставить отзыв</a></button>
         {% else %}
             <p>Чтобы оставить отзыв, авторизуйтесь на сайте.</p>
         {% endif %}

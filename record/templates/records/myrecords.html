@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block style %}
+    body{
+    color: white;
+    background-image: url("../../static/styles/images/recordsback.JPG");
+    }
+
+    .footer{
+    position: relative;
+    }
+
+    .rev{
+    color: white;
+    margin-top: 100px;
+    text-align: center
+    }
+
+    .notes{
+    font-style: italic;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-bottom: 100px;
+    border: 3px dashed white;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center
+    }
+
+{% endblock %}
+{% block title %} Мои записи {% endblock %}
+{% block content %}
+    <div class="clean"></div>
+    <div class="rev">
+        <h2>Ваши записи:</h2>
+    </div>
+
+    {% for records in request.user.user_data.all %}
+        <div class="notes">
+        {{ records.name }} <br>
+        Комментарий: <br>
+        {{ records.body }}<br>
+        Дата: <br>
+        {{ records.day }}
+        </div>
+    {% endfor %}
+
+
+
+{% endblock %}

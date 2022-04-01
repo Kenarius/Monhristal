@@ -28,10 +28,10 @@
     <span class="main"><a href="">Главная</a></span>
     <span class="services">Услуги</span>
     <span class="contacts"><a href="#footer">Контакты</a></span>
-    <span class="reviews"><a href="reviews/">Отзывы</a></span>
+    <span class="reviews"><a href="{% url "record:review" %}">Отзывы</a></span>
     {% if request.user.is_authenticated %}
     <span class="login">Здравствуйте {{ request.user.username }} <a href="{% url "record:logout" %}">Выход |</a> </span>
-    <span class="records">Мои записи</span>
+    <span class="records"><a href="{% url "record:myrecords" %}">Мои записи</a></span>
     {% else %}
     <span class="login off"><a href="{% url "record:login" %}">Авторизация</a></span>
     {% endif %}
@@ -132,7 +132,9 @@
     <div class="about">Стаж макияжа 3 года. Обучение макияжа для себя<br>
     Работа на коммерчиских съёмках, гриммёр на телевидении, участие в различных фотосессиях<br>Занимаеся организацией и проведением фотосъёмок более 2 лет.
      Работаем под ключ с известными брендами алкогольной продукции,<br>был организаван проект с Domino's Pizza <br>
-    Работаем по договору подряда.  </div>
+    Работаем по договору подряда.
+    <img class="cert" src="../../static/styles/images/Certificate.jpg" width="160" height="213" alt="">
+    </div>
     <a class="butt" href="https://t.me/monhristal">Запись</a></div>
 <footer class="footer" id="footer">
     <span class="logo footerlogo"><img src="../../static/styles/images/logo.jpg" width="70" height="70" alt=""></span>

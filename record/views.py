@@ -30,3 +30,7 @@ def write_review(request):
     return render(request,
                   'records/write.html',
                   {'form': review_form})
+
+
+def records_view(request):
+    return render(request, "records/myrecords.html",)
