@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% block style %}
+
+    body{
+    background-image: url("../../static/styles/images/recordback.JPG");
+    color: white
+    }
+
+    .clean{
+    height: 250px;
+    }
+
+    .photodiv {
+    height: 500px;
+    text-align: center;
+    font-size: 64px;
+    }
+
+    .photodiv span.tit{
+    position: absolute;
+    margin-left: -170px;
+    z-index: 1;
+    margin-top: 120px;
+    }
+
+    .photodiv span.photoimg {
+    margin-left: -300px;
+    position: absolute;
+    }
+
+    .descrip{
+    text-indent: 25px;
+    height: auto;
+    font-size: 24px;
+    margin-left: 50px;
+    margin-bottom: 200px;
+    }
+
+    .ser{
+    position: absolute;
+    margin-left: 1300px;
+    margin-top: -350px;
+    }
+
+    .make{
+    margin-top: -350px;
+    }
+
+    .two{
+    margin-top: -600px;
+    }
+
+    .three{
+    margin-top: -450px;
+    }
+
+    .photodiv span.tit.sec{
+    margin-top: 80px;
+    margin-left: -210px;
+    }
+    .photodiv span.tit.shoot{
+    margin-left: -210px;
+    font-weight: bold;
+    color: DarkRed
+    }
+{% endblock %}
+{% block title %} Услуги {% endblock %}
+{% block content %}
+    <div class="clean"></div>
+    <div class="photodiv"><span class="tit" id="makeup">Макияж</span>
+        <span class="photoimg"><img src="../../static/styles/images/makeup.jpg" height="350" width="500" alt=""></span>
+    </div>
+    <div class="descrip">
+        <p>Стаж макияжа 3 года. <br>
+        <ul>
+            <li>Делаю экспресс-макияж (нюд)</li>
+            <li>Дневной макияж</li>
+            <li>Вечерний</li>
+            <li>Свадебный</li>
+            <li>Креатив</li>
+            <li>Работаю на дому/выезжаю в студию/на дом</li>
+        </ul>
+        </p>
+        <p>Преподаю макияж для себя. Экспресс-курс состоит из 1 занятия. <br>
+            В нем мы разбираем вашу косметичку и учимся
+            делать дневной макияж переходящий в вечерний. <br> Полный курс состоит из 4 занятий:
+
+        <div id="carousel1" class="carousel slide ser" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../static/styles/images/photo1.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/styles/images/photo2.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/styles/images/photo3.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+        <ul>
+
+            <li>1 занятие Разбор косметички и лекция про типы кожи.</li>
+            <li>2 занятие Дневной макияж</li>
+            <li>3 Занятие Вечерний макияж</li>
+            <li>4 Занятие Голливудский Макияж. Дополнительно ( шопинг сопровождение по желанию клиента). <br>
+                Подбор косметики и кистей для макияжа
+            </li>
+        </ul>
+        </p>
+    </div>
+    <div class="photodiv"><span class="tit sec make" id="objshoot">Предметная <br>съёмка</span>
+        <span class="photoimg"><img src="../../static/styles/images/object.jpg" height="350" width="500" alt=""></span>
+    </div>
+    <div class="descrip">
+        <p>Создание визуала для вашего аккаунта на месяц ведения "под ключ". <br>
+        <ul>
+            <li>Портретная / сюжетная съемка для личных и коммерческих блогов</li>
+            <li>Предметная съемка товара / услуги</li>
+            <li>Съемка рабочих процессов</li>
+            <li>Помощь в выборе визуальной стратегии</li>
+            <li>Предоставление вариантов / идей для ленты</li>
+            <li>Поиск и переговоры с подрядчиками и площадками</li>
+            <li>Обработка (цветокоррекция и ретушь)</li>
+            <li>Выезд на объект / магазин</li>
+            <li>Съемка согласно вашему контент плану</li>
+        </ul>
+        </p>
+        <p> Длительность съемки: 2-2,5 ч. <br>
+            Количество фото: 12 фото в ленту + 30 фото в сторис в обработке. </p>
+        <p>Кейсы с крупными клиентами: Domino's Pizza, Завод игристых вин. </p>
+        <p> Дополнительно оплачиваются: <br>
+        <ul>
+            <li>Транспортные расходы на дальние выезды за пределами Минска</li>
+            <li>Аренда студии</li>
+            <li>Стилист</li>
+            <li>Визажист
+            </li>
+        </ul>
+        </p>
+        <div id="carousel2" class="carousel slide ser two" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../static/styles/images/photo4.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/styles/images/photo5.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/styles/images/photo6.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+    </div>
+    <div class="photodiv"><span class="tit shoot" id="photoshoot">Фотосессия</span>
+        <span class="photoimg"><img src="../../static/styles/images/photoshoot.jpg" height="350" width="500"
+                                    alt=""></span>
+    </div>
+    <div class="descrip">
+        <p> Организация фотосессии по вашим желаниям! <br>
+            Поможем организовать красивое предложение и запечатлеть важный момент в вашей жизни!
+        </p>
+        <ul>
+            <li>Фотосессия Секретное предложение</li>
+            <li>Love story</li>
+            <li>Фотопрогулка</li>
+            <li>Студийная съемка <br>В услугу входит макияж и 1 час фотосессии</li>
+            <li>Экспресс-съемка <br>В услугу входит макияж и 30 мину фотосессии</li>
+        </ul>
+    <div id="carousel3" class="carousel slide ser three" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../static/styles/images/photo7.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/styles/images/photo8.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/styles/images/photo9.jpg" width="350" height="525" class="d-block w-100"
+                         alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+    </div>
+
+{% endblock %}

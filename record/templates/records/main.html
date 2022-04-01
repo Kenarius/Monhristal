@@ -24,13 +24,13 @@
 <body>
   
   <div class="jumbotron text-center red menu" >
-    <span class="logo"><img src="../../static/styles/images/logo.jpg" width="80" height="80" alt=""></span>
+    <span class="logo"><a href="http://127.0.0.1:8000/"><img src="../../static/styles/images/logo.jpg" width="80" height="80" alt=""></a></span>
     <span class="main"><a href="">Главная</a></span>
-    <span class="services">Услуги</span>
+    <span class="services"><a href="{% url "record:services" %}">Услуги</a></span>
     <span class="contacts"><a href="#footer">Контакты</a></span>
     <span class="reviews"><a href="{% url "record:review" %}">Отзывы</a></span>
     {% if request.user.is_authenticated %}
-    <span class="login">Здравствуйте {{ request.user.username }} <a href="{% url "record:logout" %}">Выход |</a><a class="rec" href="{% url "record:myrecords" %}">Мои записи</a></span>
+    <span class="login">Здравствуйте {{ request.user.first_name }} <a href="{% url "record:logout" %}">Выход |</a><a class="rec" href="{% url "record:myrecords" %}">Мои записи</a></span>
     {% else %}
     <span class="login off"><a href="{% url "record:login" %}">Авторизация</a></span>
     {% endif %}
@@ -49,16 +49,16 @@
       <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Фотосессия</a></div>
+            <div class="links"><a href="{% url "record:services" %}#photoshoot">Фотосессия</a></div>
             <img src="../../static/styles/images/photo10.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Фотосессия</a></div>
+            <div class="links"><a href="{% url "record:services" %}#photoshoot">Фотосессия</a></div>
             <img src="../../static/styles/images/photo20.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <img src="../../static/styles/images/photo30.jpg" width="350" height="525" class="d-block w-100" alt="...">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Фотосессия</a></div>
+            <div class="links"><a href="{% url "record:services" %}#photoshoot">Фотосессия</a></div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
@@ -75,17 +75,17 @@
       <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Предметая<br>съёмка</a></div>
+            <div class="links"><a href="{% url "record:services" %}#objshoot">Предметая<br>съёмка</a></div>
 
             <img src="../../static/styles/images/photo40.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Предметая<br>съёмка</a></div>
+            <div class="links"><a href="{% url "record:services" %}#objshoot">Предметая<br>съёмка</a></div>
 
             <img src="../../static/styles/images/photo50.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Предметая<br>съёмка</a></div>
+            <div class="links"><a href="{% url "record:services" %}#objshoot">Предметая<br>съёмка</a></div>
             <img src="../../static/styles/images/photo60.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
         </div>
@@ -103,15 +103,15 @@
       <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Макияж</a></div>
+            <div class="links"><a href="{% url "record:services" %}#makeup">Макияж</a></div>
             <img src="../../static/styles/images/photo70.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Макияж</a></div>
+            <div class="links"><a href="{% url "record:services" %}#makeup">Макияж</a></div>
             <img src="../../static/styles/images/photo80.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <div class="links"><a href="https://www.instagram.com/monhristal/">Макияж</a></div>
+            <div class="links"><a href="{% url "record:services" %}#makeup">Макияж</a></div>
             <img src="../../static/styles/images/photo90.jpg" width="350" height="525" class="d-block w-100" alt="...">
           </div>
         </div>

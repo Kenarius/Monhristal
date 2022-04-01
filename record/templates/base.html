@@ -35,13 +35,13 @@
 </head>
 <body>
 <div class="jumbotron text-center red menu">
-    <span class="logo"><img src="../../static/styles/images/logo.jpg" width="80" height="80" alt=""></span>
+    <span class="logo"><a href="http://127.0.0.1:8000/"><img src="../../static/styles/images/logo.jpg" width="80" height="80" alt=""></a></span>
     <span class="main"><a href="http://127.0.0.1:8000/">Главная</a></span>
-    <span class="services">Услуги</span>
+    <span class="services"><a href="{% url "record:services" %}">Услуги</a></span>
     <span class="contacts"><a href="#footer">Контакты</a></span>
     <span class="reviews"><a href="{% url "record:review" %}">Отзывы</a></span>
     {% if request.user.is_authenticated %}
-    <span class="login">Здравствуйте {{ request.user.username }} <a href="{% url "record:logout" %}">Выход |</a><a class="rec" href="{% url "record:myrecords" %}">Мои записи</a></span>
+    <span class="login">Здравствуйте {{ request.user.first_name }} <a href="{% url "record:logout" %}">Выход |</a><a class="rec" href="{% url "record:myrecords" %}">Мои записи</a></span>
     {% else %}
     <span class="login off"><a href="{% url "record:login" %}">Авторизация</a></span>
     {% endif %}

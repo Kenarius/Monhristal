@@ -49,7 +49,7 @@ def make_record(request):
 
 
 def records_view(request):
-    return render(request, "records/myrecords.html", )
+    return render(request, "records/myrecords.html")
 
 
 def register(request):
@@ -66,3 +66,7 @@ def register(request):
     else:
         user_form = forms.RegistrationForm(request.POST)
         return render(request, 'registration/register_user.html', {"form": user_form})
+
+
+def services_view(request):
+    return render(request, "records/services.html")
