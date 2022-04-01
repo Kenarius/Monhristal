@@ -7,7 +7,8 @@
     }
 
     .footer{
-    position: relative;
+        margin-top: 0px;
+        position: relative;
     }
 
     .rev{
@@ -35,17 +36,18 @@
     <div class="rev">
         <h2>Ваши записи:</h2>
     </div>
-
-    {% for records in request.user.user_data.all %}
-        <div class="notes">
-        {{ records.name }} <br>
-        Комментарий: <br>
-        {{ records.body }}<br>
-        Дата: <br>
-        {{ records.day }}
-        </div>
-    {% endfor %}
-
+    <div class="wrapper">
+        {% for records in request.user.user_data.all %}
+            <div class="notes">
+            {{ records.name }} <br>
+            Комментарий: <br>
+            {{ records.body }}<br>
+            Дата: <br>
+            {{ records.day }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="clean"></div>
 
 
 {% endblock %}

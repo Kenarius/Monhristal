@@ -75,6 +75,11 @@ a:hover {
     margin-left: 30px;
 }
 
+.menu span.login a.rec {
+    margin-left: 10px;
+    font-weight: lighter;
+}
+
 .menu span.login.off {
     margin-left: 1250px;
 }
@@ -258,6 +263,10 @@ footer span.adress{
     height: 70px;
     margin-left: 70%;
     padding-top: 18px;
+}
+
+.wrapper{
+    height: 100%;
 }
 
 @media all and (max-width: 1250px){

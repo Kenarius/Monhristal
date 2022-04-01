@@ -26,7 +26,7 @@
         }
 
         .footer {
-            margin-top: -50px;
+            margin-top: 0px;
         }
     </style>
     <title>{% block title %}
@@ -41,8 +41,7 @@
     <span class="contacts"><a href="#footer">Контакты</a></span>
     <span class="reviews"><a href="{% url "record:review" %}">Отзывы</a></span>
     {% if request.user.is_authenticated %}
-    <span class="login">Здравствуйте {{ request.user.username }} <a href="{% url "record:logout" %}">Выход |</a> </span>
-    <span class="records"><a href="{% url "record:myrecords" %}">Мои записи</a></span>
+    <span class="login">Здравствуйте {{ request.user.username }} <a href="{% url "record:logout" %}">Выход |</a><a class="rec" href="{% url "record:myrecords" %}">Мои записи</a></span>
     {% else %}
     <span class="login off"><a href="{% url "record:login" %}">Авторизация</a></span>
     {% endif %}

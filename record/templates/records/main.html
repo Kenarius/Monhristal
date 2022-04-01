@@ -30,8 +30,7 @@
     <span class="contacts"><a href="#footer">Контакты</a></span>
     <span class="reviews"><a href="{% url "record:review" %}">Отзывы</a></span>
     {% if request.user.is_authenticated %}
-    <span class="login">Здравствуйте {{ request.user.username }} <a href="{% url "record:logout" %}">Выход |</a> </span>
-    <span class="records"><a href="{% url "record:myrecords" %}">Мои записи</a></span>
+    <span class="login">Здравствуйте {{ request.user.username }} <a href="{% url "record:logout" %}">Выход |</a><a class="rec" href="{% url "record:myrecords" %}">Мои записи</a></span>
     {% else %}
     <span class="login off"><a href="{% url "record:login" %}">Авторизация</a></span>
     {% endif %}
@@ -135,7 +134,7 @@
     Работаем по договору подряда.
     <img class="cert" src="../../static/styles/images/Certificate.jpg" width="160" height="213" alt="">
     </div>
-    <a class="butt" href="https://t.me/monhristal">Запись</a></div>
+    <a class="butt" href="{% url "record:record" %}">Запись</a></div>
 <footer class="footer" id="footer">
     <span class="logo footerlogo"><img src="../../static/styles/images/logo.jpg" width="70" height="70" alt=""></span>
     <span class="social"><a href="https://www.instagram.com/monhristal/" target="_blank"><img src="../../static/styles/images/instagram.png" alt=""></a>

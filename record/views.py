@@ -2,11 +2,10 @@ from django.shortcuts import render
 from . import models
 from . import forms
 from django.contrib.auth.models import User
-from .forms import ReviewForm
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
 
 
-# Create your views here.
 def main_view(request):
     return render(request, 'records/main.html')
 
@@ -32,5 +31,21 @@ def write_review(request):
                   {'form': review_form})
 
 
+@login_required
+def make_record(request):
+    if request.method == 'POST':
+        record_form = forms.RecordForm(request.POST)
+        if record_form.is_valid():
+            new_review = record_form.save(commit=False)
+            new_review.author = request.user
+            new_review.save()
+            return redirect('record:myrecords')
+    else:
+        record_form = forms.RecordForm()
+    return render(request,
+                  'records/record.html',
+                  {'form': record_form})
+
+
 def records_view(request):
-    return render(request, "records/myrecords.html",)
+    return render(request, "records/myrecords.html", )

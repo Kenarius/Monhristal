@@ -9,7 +9,7 @@ class ReviewForm(forms.ModelForm):
         fields = ('name', 'body', 'record_type')
 
 
-class RecordsForm(forms.ModelForm):
+class RecordForm(forms.ModelForm):
     class Meta:
         model = models.Records
-        fields = ('name', 'body', 'record_type')
+        fields = ('name', 'body', 'day', 'record_type')
