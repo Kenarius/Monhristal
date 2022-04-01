@@ -11,14 +11,22 @@
     <style>
         {% block style %}
         {% endblock %}
-        body{
-            height: 900px;
+
+        html, body {
+            height: 100%;
+            margin: 0;
         }
-        footer{
-            position: absolute;
+
+        footer {
+            position: relative;
             left: 0;
             bottom: 0;
             width: 100%;
+            margin-top: -10px;
+        }
+
+        .footer {
+            margin-top: -50px;
         }
     </style>
     <title>{% block title %}
@@ -38,19 +46,17 @@
 {% block content %}Smth{% endblock %}
 <footer class="footer" id="footer">
     <span class="logo footerlogo"><img src="../../static/styles/images/logo.jpg" width="70" height="70" alt=""></span>
-        <span class="social"><a href="https://www.instagram.com/monhristal/" target="_blank"><img
-                src="../../static/styles/images/instagram.png" alt=""></a>
+    <span class="social"><a href="https://www.instagram.com/monhristal/" target="_blank"><img
+            src="../../static/styles/images/instagram.png" alt=""></a>
         <a href="https://t.me/monhristal" target="_blank"><img src="../../static/styles/images/telegram.png "
                                                                alt=""></a>
         </span>
     <span class="phone">Время работы 10:00-20:00 <br> Кристина +375298612953 </span>
     <span class="adress">Адрес:<br>Улица Притыцкого 78<br>Есть возможность выезда на ваш адрес.</span>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous">
-
-    </script>
-
+</script>
 </body>
 </html>

@@ -1,22 +1,30 @@
 {% extends "base.html" %}
 
 {% block style %}
+    body{
+    color: white;
+    }
+
+    .clean{
+    height: 200px;
+    }
+
     .rev{
-        color: white;
-        margin-top: 150px;
-        margin-left: 150px;
+    color: white;
+    margin-top: 150px;
+    margin-left: 150px;
     }
     h1{
-        color: white;
-        text-align: center;
+    text-align: center;
     }
     body{
-        background-image: url("../../static/styles/images/bardiglio-close.JPG");
+    background-image: url("../../static/styles/images/bardiglio-close.JPG");
     }
     .revtitle{
-        font-family: 'cursive';
-        font-weight: bold;
+    font-family: 'cursive';
+    font-weight: bold;
     }
+
 {% endblock %}
 {% block title %} Отзывы {% endblock %}
 {% block content %}
@@ -25,10 +33,19 @@
     <div class="rev">
         {% for review in reviews %}
             <h3>{{ review.name }}</h3>
-{#            <p><img src="{{ review.photo }}" alt="alter text"></p>#}
+            {#            <p><img src="{{ review.photo }}" alt="alter text"></p>#}
             <p>{{ review.body }}</p>
             <p>{{ review.record_type }}<br>
                 {{ review.publish }}</p>
         {% endfor %}
     </div>
+    <div>
+        {% if request.user.is_authenticated %}
+            <h2>Вы можете оставить Ваш отзыв!</h2>
+            <a href="{% url "record:write_form" %}">Отзыв</a>
+        {% else %}
+            <p>Чтобы оставить отзыв, авторизуйтесь на сайте.</p>
+        {% endif %}
+    </div>
+    <div class="clean"></div>
 {% endblock %}

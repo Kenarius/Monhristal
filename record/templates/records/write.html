@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block style %}
+    body{
+    color: white;
+    background-image: url("../../static/styles/images/bardiglio-close.JPG");
+    }
+
+    .footer{
+    position: absolute;
+    }
+
+    .rev{
+    color: white;
+    margin-top: 150px;
+    text-align: center
+    }
+
+{% endblock %}
+{% block title %} Написать отзыв {% endblock %}
+{% block content %}
+    <div class="clean"></div>
+    <div class="rev">
+        <h2>Отправьте ваш отзыв</h2>
+        <form action="." method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+
+{% endblock %}

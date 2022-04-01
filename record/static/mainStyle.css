@@ -214,11 +214,6 @@ footer{
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
 }
 
-.foot{
-    height: 50px;
-    margin: 0;
-}
-
 footer span.logo.footerlogo{
     position: absolute;
     margin-left: 200px;
