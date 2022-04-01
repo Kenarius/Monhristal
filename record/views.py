@@ -4,6 +4,7 @@ from . import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
 
 def main_view(request):
@@ -21,7 +22,7 @@ def write_review(request):
         review_form = forms.ReviewForm(request.POST)
         if review_form.is_valid():
             new_review = review_form.save(commit=False)
-            new_review.author = User.objects.first()
+            new_review.author = request.user
             new_review.save()
             return redirect('record:review')
     else:
@@ -36,9 +37,9 @@ def make_record(request):
     if request.method == 'POST':
         record_form = forms.RecordForm(request.POST)
         if record_form.is_valid():
-            new_review = record_form.save(commit=False)
-            new_review.author = request.user
-            new_review.save()
+            new_record = record_form.save(commit=False)
+            new_record.author = request.user
+            new_record.save()
             return redirect('record:myrecords')
     else:
         record_form = forms.RecordForm()
@@ -49,3 +50,19 @@ def make_record(request):
 
 def records_view(request):
     return render(request, "records/myrecords.html", )
+
+
+def register(request):
+    if request.method == "POST":
+        user_form = forms.RegistrationForm(request.POST)
+        if user_form.is_valid():
+            new_user = user_form.save(commit=False)
+            new_user.set_password(user_form.cleaned_data['password'])
+            new_user.save()
+            return render(request, 'registration/registration_complete.html',
+                          {'new_user': new_user})
+        else:
+            return HttpResponse('bad credentials')
+    else:
+        user_form = forms.RegistrationForm(request.POST)
+        return render(request, 'registration/register_user.html', {"form": user_form})
